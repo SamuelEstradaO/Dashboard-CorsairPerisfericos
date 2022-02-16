@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
@@ -8,7 +8,6 @@ import SmallCard from './SmallCard';
 let productsInDB = {
     title: 'Total de productos',
     color: 'info',
-    url: 'http://localhost:3030/api/products',
     icon: 'fa-layer-group'
 }
 
@@ -17,8 +16,6 @@ let productsInDB = {
 let totalCategory = {
     title: ' Total de categorias',
     color: 'info',
-    /* url: 'http://localhost:3030/api/products', */
-    cuantity: '79',
     icon: 'fa-tags'
 }
 
@@ -27,15 +24,42 @@ let totalCategory = {
 let usersQuantity = {
     title: 'Total de usuarios',
     color: 'info',
-    url: 'http://localhost:3030/api/users',
     icon: 'fa-users'
-
-
 }
 
-let cartProps = [productsInDB, totalCategory, usersQuantity];
+
 
 function ContentRowMovies() {
+    const [products, setProducts] = useState("Cargando...");
+    const [categories, setCategories] = useState("Cargando...");
+    const [users, setUsers] = useState("Cargando...");
+
+    useEffect(() => {
+        fetch('/api/products')
+            .then(res => res.json())
+            .then(({ count, countByCategory }) => {
+                setProducts(count);
+                setCategories(countByCategory.length);
+            })
+            .catch(err => console.log(err));
+        fetch('/api/users')
+            .then(res => res.json())
+            .then(({ count }) => {
+                setUsers(count);
+            })
+            .catch(err => console.log(err));
+    }, []);
+
+    // useEffect(() => {
+    //     productsInDB.quantity = products;
+    //     totalCategory.quantity = categories;
+    //     usersQuantity.quantity = users;
+    // },[products, categories, users]);
+    productsInDB.quantity = products;
+    totalCategory.quantity = categories;
+    usersQuantity.quantity = users;
+
+    let cartProps = [productsInDB, totalCategory, usersQuantity];
     return (
 
         <div className="row">

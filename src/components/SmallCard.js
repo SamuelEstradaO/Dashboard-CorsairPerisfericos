@@ -1,25 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 function SmallCard(props) {
-
-    const [cantidad, setCantidad] = useState(0);
-
-    useEffect(() => {
-        fetch(props.url)
-            .then(res => {
-                console.log(res)
-                res.json()
-            })
-            .then(({ count }) => {
-                setCantidad(count);
-            })
-            .catch(err => {
-                console.log(err)
-                setCantidad("No se pudo obtener la información")
-            });
-
-    }, [])
 
     return (
         <div className="col-md-4 mb-4">
@@ -28,7 +10,7 @@ function SmallCard(props) {
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                             <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}> {props.title}</div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">{cantidad}</div>
+                            <div className="h5 mb-0 font-weight-bold text-gray-800">{props.quantity}</div>
                         </div>
                         <div className="col-auto">
                             <i className={`fas ${props.icon}  fa-2x text-${props.color}`}></i>
