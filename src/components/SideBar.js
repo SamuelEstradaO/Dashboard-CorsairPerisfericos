@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
+import Categories from './Categories';
+import UltimoProducto from './UltimoProducto';
 import ContentRowMovies from './ContentRowMovies';
+import ListadoProductos from './ListadoProductos';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import { Link, Route, Switch } from 'react-router-dom';
+
 
 function SideBar() {
     return (
@@ -22,15 +24,6 @@ function SideBar() {
                     </div>
                 </a>
 
-                {/*<!-- Divider -->*/}
-                {/* <hr className="sidebar-divider my-5" /> */}
-
-                {/*<!-- Nav Item - Dashboard -->*/}
-                {/* <li className="nav-item active">
-                    <Link className="nav-link" to="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
-                </li> */}
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider bg-dark mt-5" />
@@ -40,24 +33,24 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/GenresInDb">
+                    <Link className="nav-link" to="/categories">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span className="text-dark">Pages</span>
+                        <span className="text-dark">Categorias</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link " to="/LastMovieInDb">
+                    <Link className="nav-link " to="/ultimoProducto">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span className="text-dark">Charts</span></Link>
+                        <span className="text-dark">Ultimo producto</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/ContentRowMovies">
+                    <Link className="nav-link" to="/listadoProductos">
                         <i className="fas fa-fw fa-table"></i>
-                        <span className="text-dark">Tables</span></Link>
+                        <span className="text-dark">Listado de productos</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -66,40 +59,22 @@ function SideBar() {
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/SearchMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span className="text-dark">Search</span></Link>
+                        <span className="text-dark">Buscar producto</span></Link>
                 </li>
             </ul>
 
-            {/*<!-- End of Sidebar -->*/}
-
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
-
-            {/*<!-- End Microdesafio 2 -->*/}
             <Switch>
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />
+                <Route path="/categories">
+                    <Categories />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                <Route path="/ultimoProducto">
+                    <UltimoProducto />
                 </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
+                <Route path="/listadoProductos">
+                    <ListadoProductos />
                 </Route>
                 <Route path="/SearchMovies">
                     <SearchMovies />

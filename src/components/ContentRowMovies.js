@@ -41,14 +41,19 @@ function ContentRowMovies() {
                 setProducts(count);
                 setCategories(countByCategory.length);
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                setProducts("No se puede cargar la cantidad de productos")
+                setCategories("No se puede cargar la cantidad de categorias")
+            })
         fetch('/api/users')
             .then(res => res.json())
             .then(({ count }) => {
                 setUsers(count);
             })
-            .catch(err => console.log(err));
-    }, []);
+            .catch(err => setUsers("No se puede cargar la cantidad de usuarios."))
+    }, [])
+
+
 
     // useEffect(() => {
     //     productsInDB.quantity = products;
