@@ -29,7 +29,7 @@ function UltimoProducto() {
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={ultimoProducto.imagen} alt=" ultimoProducto " />
                     </div>
                     <p>{ultimoProducto.descripcion}</p>
-                    <a className="btn btn-info" target="_blank" rel="nofollow" href="/">Ver detalle de producto</a>
+                    {/* <a className="btn btn-info" target="_blank" rel="nofollow" href="/">Ver detalle de producto</a> */}
                 </div>
             </div>
         </div >

@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
 import ContentWrapper from "./ContentWrapper";
-import Categories from "./Categories";
+import TableCategories from "./TableCategories";
 import UltimoProducto from "./UltimoProducto";
 import ContentRowMovies from "./ContentRowMovies";
 import ListadoProductos from "./ListadoProductos";
@@ -73,7 +73,7 @@ function SideBar() {
           <ContentWrapper />
         </Route>
         <Route path="/categories">
-          <Categories />
+          <TableCategories />
         </Route>
         <Route path="/ultimoProducto">
           <UltimoProducto />
