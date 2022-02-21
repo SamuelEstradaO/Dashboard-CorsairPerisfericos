@@ -35,7 +35,7 @@ function ContentRowMovies() {
     const [users, setUsers] = useState("Cargando...");
 
     useEffect(() => {
-        fetch('/api/products')
+        fetch(`${process.env.PAGE_URL}/api/products`)
             .then(res => res.json())
             .then(({ count, countByCategory }) => {
                 setProducts(count);

@@ -7,7 +7,7 @@ function ProductRow({ id, titulo, precio, detail, categoria }) {
     const [recomendado, setRecomendado] = useState(0);
 
     useEffect(() => {
-        fetch(detail)
+        fetch(process.env.PAGE_URL+detail)
             .then(res => res.json())
             .then(({ product }) => {
 

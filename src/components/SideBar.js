@@ -18,14 +18,14 @@ function SideBar() {
         id="accordionSidebar"
       >
         {/*<!-- Sidebar - Brand -->*/}
-        <a
+        <link
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="/"
+          to="/"
         >
           <div className="sidebar-brand-icon">
             <img className="w-100" src={logo} alt="Digital House" />
           </div>
-        </a>
+        </link>
 
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider bg-dark mt-5" />

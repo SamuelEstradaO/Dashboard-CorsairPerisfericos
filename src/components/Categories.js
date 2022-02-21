@@ -11,7 +11,7 @@ function Categories({ changeCategory, isMain }) {
   }, [categoria]);
 
   useEffect(() => {
-    fetch("/api/products")
+    fetch(`${process.env.PAGE_URL}/api/products`)
       .then((res) => res.json())
       .then(({ countByCategory }) => {
         let categorias = [];

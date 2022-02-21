@@ -5,7 +5,7 @@ function UltimoProducto() {
     const [ultimoProducto, setUltimoProducto] = useState({});
 
     useEffect(() => {
-        fetch('/api/products')
+        fetch(`${process.env.PAGE_URL}/api/products`)
             .then(res => res.json())
             .then(({ products }) => {
                 return fetch(products[products.length - 1].detail)
@@ -26,7 +26,7 @@ function UltimoProducto() {
                 <div className="card-body">
                     <h4 className="text-center">{ultimoProducto.titulo}</h4>
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={ultimoProducto.imagen} alt=" ultimoProducto " />
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={process.env.PAGE_URL+ultimoProducto.imagen} alt=" ultimoProducto " />
                     </div>
                     <p>{ultimoProducto.descripcion}</p>
                     {/* <a className="btn btn-info" target="_blank" rel="nofollow" href="/">Ver detalle de producto</a> */}

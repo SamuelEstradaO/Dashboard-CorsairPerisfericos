@@ -9,7 +9,7 @@ function TableCategories() {
     const [categoria, setCategoria] = useState("");
 
     useEffect(() => {
-        fetch("/api/products")
+        fetch(`${process.env.PAGE_URL}/api/products`)
             .then((res) => res.json())
             .then(({ products }) => {
                 let listado = [];

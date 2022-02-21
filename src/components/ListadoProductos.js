@@ -8,7 +8,7 @@ function ListadoProductos() {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        fetch("/api/products")
+        fetch(`${process.env.PAGE_URL}/api/products`)
             .then(res => res.json())
             .then(({ products }) => setProductos(products))
             .catch(err => console.log("No se pueden cargar los productos."));
