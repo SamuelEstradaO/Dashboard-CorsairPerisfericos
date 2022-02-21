@@ -2,7 +2,7 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://samuelestradao.github.io",
+  "homepage":"https://samuelestradao.github.io/Dashboard-CorsairPerisfericos",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
