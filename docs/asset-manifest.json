@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b0c4d937.chunk.css",
+    "main.js": "/static/js/main.cdf4b75e.chunk.js",
+    "main.js.map": "/static/js/main.cdf4b75e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c1f61a68.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c1f61a68.js.map",
+    "static/js/2.64f626b2.chunk.js": "/static/js/2.64f626b2.chunk.js",
+    "static/js/2.64f626b2.chunk.js.map": "/static/js/2.64f626b2.chunk.js.map",
+    "static/js/3.cfbc0b6c.chunk.js": "/static/js/3.cfbc0b6c.chunk.js",
+    "static/js/3.cfbc0b6c.chunk.js.map": "/static/js/3.cfbc0b6c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b0c4d937.chunk.css.map": "/static/css/main.b0c4d937.chunk.css.map",
+    "static/js/2.64f626b2.chunk.js.LICENSE.txt": "/static/js/2.64f626b2.chunk.js.LICENSE.txt",
+    "static/media/404.06a37534.png": "/static/media/404.06a37534.png",
+    "static/media/jordan-walke.aa2b2cc6.png": "/static/media/jordan-walke.aa2b2cc6.png",
+    "static/media/logo.0b50f9c2.png": "/static/media/logo.0b50f9c2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c1f61a68.js",
+    "static/js/2.64f626b2.chunk.js",
+    "static/css/main.b0c4d937.chunk.css",
+    "static/js/main.cdf4b75e.chunk.js"
+  ]
+}
