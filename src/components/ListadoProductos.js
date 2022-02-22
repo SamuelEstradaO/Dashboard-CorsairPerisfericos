@@ -8,7 +8,7 @@ function ListadoProductos() {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.PAGE_URL}/api/products`)
+        fetch(`https://corsairneta.herokuapp.com/api/products`)
             .then(res => res.json())
             .then(({ products }) => setProductos(products))
             .catch(err => console.log("No se pueden cargar los productos."));

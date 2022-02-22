@@ -4,7 +4,7 @@ function ProductCard({ id, titulo, precio, descripcion, detail }) {
   const [imagen, setImagen] = useState("");
 
   useEffect(() => {
-    fetch(process.env.PAGE_URL+detail)
+    fetch("https://corsairneta.herokuapp.com"+detail)
       .then((res) => res.json())
       .then(({ product }) => {
         setImagen(product.imagen);
@@ -21,7 +21,7 @@ function ProductCard({ id, titulo, precio, descripcion, detail }) {
           <div className="text-center">
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-              src={process.env.PAGE_URL+imagen}
+              src={"https://corsairneta.herokuapp.com"+imagen}
               alt={titulo}
               style={{
                 width: "90%",

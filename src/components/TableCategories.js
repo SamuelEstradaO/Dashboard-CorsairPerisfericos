@@ -9,7 +9,7 @@ function TableCategories() {
     const [categoria, setCategoria] = useState("");
 
     useEffect(() => {
-        fetch(`${process.env.PAGE_URL}/api/products`)
+        fetch(`https://corsairneta.herokuapp.com/api/products`)
             .then((res) => res.json())
             .then(({ products }) => {
                 let listado = [];

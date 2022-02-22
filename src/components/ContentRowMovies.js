@@ -35,7 +35,7 @@ function ContentRowMovies() {
     const [users, setUsers] = useState("Cargando...");
 
     useEffect(() => {
-        fetch(`${process.env.PAGE_URL}/api/products`)
+        fetch(`https://corsairneta.herokuapp.com/api/products`)
             .then(res => res.json())
             .then(({ count, countByCategory }) => {
                 setProducts(count);
@@ -45,7 +45,7 @@ function ContentRowMovies() {
                 setProducts("No se puede cargar la cantidad de productos")
                 setCategories("No se puede cargar la cantidad de categorias")
             })
-        fetch('/api/users')
+        fetch('https://corsairneta.herokuapp.com/api/users')
             .then(res => res.json())
             .then(({ count }) => {
                 setUsers(count);

@@ -11,7 +11,7 @@ function Categories({ changeCategory, isMain }) {
   }, [categoria]);
 
   useEffect(() => {
-    fetch(`${process.env.PAGE_URL}/api/products`)
+    fetch(`https://corsairneta.herokuapp.com/api/products`)
       .then((res) => res.json())
       .then(({ countByCategory }) => {
         let categorias = [];

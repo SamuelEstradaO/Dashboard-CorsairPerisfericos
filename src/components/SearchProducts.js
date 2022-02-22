@@ -7,7 +7,7 @@ function SearchProducts() {
   const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
-    fetch(`${process.env.PAGE_URL}/api/products/search?key=${keyword}`)
+    fetch(`https://corsairneta.herokuapp.com/api/products/search?key=${keyword}`)
       .then((res) => res.json())
       .then((products) => {
         setProducts(products);
