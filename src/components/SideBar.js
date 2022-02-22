@@ -18,14 +18,11 @@ function SideBar() {
         id="accordionSidebar"
       >
         {/*<!-- Sidebar - Brand -->*/}
-        <link
-          className="sidebar-brand d-flex align-items-center justify-content-center"
-          to="/"
-        >
-          <div className="sidebar-brand-icon">
-            <img className="w-100" src={logo} alt="Digital House" />
-          </div>
-        </link>
+        <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
+          <span className="sidebar-brand-icon" style={{'display': 'block'}}>
+            <img className="w-100" src={logo} alt="Corsair" />
+          </span>
+        </Link>
 
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider bg-dark mt-5" />
