@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Dashboard-CorsairPerisfericos/static/css/main.b0c4d937.chunk.css",
-    "main.js": "/Dashboard-CorsairPerisfericos/static/js/main.046bfe0d.chunk.js",
-    "main.js.map": "/Dashboard-CorsairPerisfericos/static/js/main.046bfe0d.chunk.js.map",
+    "main.js": "/Dashboard-CorsairPerisfericos/static/js/main.0afc5d48.chunk.js",
+    "main.js.map": "/Dashboard-CorsairPerisfericos/static/js/main.0afc5d48.chunk.js.map",
     "runtime-main.js": "/Dashboard-CorsairPerisfericos/static/js/runtime-main.7f6522a5.js",
     "runtime-main.js.map": "/Dashboard-CorsairPerisfericos/static/js/runtime-main.7f6522a5.js.map",
     "static/js/2.64f626b2.chunk.js": "/Dashboard-CorsairPerisfericos/static/js/2.64f626b2.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.7f6522a5.js",
     "static/js/2.64f626b2.chunk.js",
     "static/css/main.b0c4d937.chunk.css",
-    "static/js/main.046bfe0d.chunk.js"
+    "static/js/main.0afc5d48.chunk.js"
   ]
 }
